@@ -8,7 +8,7 @@ import {
     NavigatorIOS
 } from 'react-native';
 
-export class Home extends Component {
+class Home extends Component {
 
     constructor(props, context) {
         super(props, context)
@@ -23,7 +23,7 @@ export class Home extends Component {
             title: 'Genius'
         });
     }
-    
+
     render() {
         return (
             <View style={styles.container}>
@@ -33,19 +33,6 @@ export class Home extends Component {
                     accessibilityLabel="See an informative alert"
                 />
             </View>
-
-            //   <View style={styles.container}>
-            //     <Text style={styles.welcome}>
-            //       Welcome to React Native!
-            //     </Text>
-            //     <Text style={styles.instructions}>
-            //       To get started, edit index.ios.js
-            //     </Text>
-            //     <Text style={styles.instructions}>
-            //       Press Cmd+R to reload,{'\n'}
-            //       Cmd+D or shake for dev menu
-            //     </Text>
-            //   </View>
         );
     }
 }
@@ -68,3 +55,19 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+
+export class MainHomeNav extends Component {
+    render() {
+        return (
+            <NavigatorIOS
+                style={{flex: 1}}
+                initialRoute={{
+                    title: 'DBM',
+                    component: Home,
+                    rightButtonTitle: 'Add',
+                    onRightButtonPress: () => this._handleNavigationRequest(),
+                }}
+            />
+        )
+    }
+}

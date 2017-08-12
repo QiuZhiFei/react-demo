@@ -13,7 +13,8 @@ import {
   NavigatorIOS
 } from 'react-native';
 
-import { Home } from './home'
+import { MainHomeNav } from './home'
+
 
 // const TabBarView = require('./Application/View/TabBar');
 // const Home = require('./home')
@@ -21,15 +22,16 @@ import { Home } from './home'
 export default class douban extends Component {
   render() {
     return (
-      <NavigatorIOS 
-        style={styles.container}
-        initialRoute={{
-          title: 'DBM',
-          component: Home,
-          rightButtonTitle: 'Add',
-          onRightButtonPress: () => this._handleNavigationRequest(),
-        }}
-      />
+      <MainHomeNav />
+      // <NavigatorIOS 
+      //   style={styles.container}
+      //   initialRoute={{
+      //     title: 'DBM',
+      //     component: Home,
+      //     rightButtonTitle: 'Add',
+      //     onRightButtonPress: () => this._handleNavigationRequest(),
+      //   }}
+      // />
     );
   }
 }
