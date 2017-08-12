@@ -13,21 +13,25 @@ class Home extends Component {
     constructor(props, context) {
         super(props, context)
         console.log("init", props, context);
-        console.log("props == ", this.props);
     }
 
-    onButtonPress() {
+    _onButtonPress() {
         this.props.navigator.push({
             component: Home,
-            title: 'Push'
+            title: 'Push',
+            passProps: { type: 'push' }
         });
+    }
+
+    _onBack() {
+        console.log('back');
     }
 
     render() {
         return (
             <View style={styles.container}>
                 <Button
-                    onPress={this.onButtonPress.bind(this)}
+                    onPress={this._onButtonPress.bind(this)}
                     title="Push"
                     accessibilityLabel="See an informative alert"
                 />
@@ -72,10 +76,10 @@ export class MainHomeNav extends Component {
     }
 
     _handleNavigationRequest() {
-        console.log("add ", this.props, this.refs);
         this.refs.nav.push({
             component: Home,
-            title: 'Add'
+            title: 'Add',
+            passProps: { type: 'add'}
         });
     }
 }
