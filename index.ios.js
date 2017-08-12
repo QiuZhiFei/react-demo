@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import { MainHomeNav } from './home'
+import { App } from './app'
 
 
 // const TabBarView = require('./Application/View/TabBar');
@@ -22,7 +23,10 @@ import { MainHomeNav } from './home'
 export default class douban extends Component {
   render() {
     return (
-      <MainHomeNav />
+      <App />
+
+      // <MainHomeNav />
+
       // <NavigatorIOS 
       //   style={styles.container}
       //   initialRoute={{

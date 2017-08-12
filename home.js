@@ -5,7 +5,8 @@ import {
     Text,
     View,
     Button,
-    NavigatorIOS
+    NavigatorIOS,
+    TabBarIOS
 } from 'react-native';
 
 class Home extends Component {
