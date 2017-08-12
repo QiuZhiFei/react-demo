@@ -17,10 +17,9 @@ class Home extends Component {
     }
 
     onButtonPress() {
-        console.log("hehe", this.props);
         this.props.navigator.push({
             component: Home,
-            title: 'Genius'
+            title: 'Push'
         });
     }
 
@@ -29,7 +28,7 @@ class Home extends Component {
             <View style={styles.container}>
                 <Button
                     onPress={this.onButtonPress.bind(this)}
-                    title="Press Me"
+                    title="Push"
                     accessibilityLabel="See an informative alert"
                 />
             </View>
@@ -61,6 +60,7 @@ export class MainHomeNav extends Component {
         return (
             <NavigatorIOS
                 style={{flex: 1}}
+                ref='nav'
                 initialRoute={{
                     title: 'DBM',
                     component: Home,
@@ -69,5 +69,13 @@ export class MainHomeNav extends Component {
                 }}
             />
         )
+    }
+
+    _handleNavigationRequest() {
+        console.log("add ", this.props, this.refs);
+        this.refs.nav.push({
+            component: Home,
+            title: 'Add'
+        });
     }
 }
