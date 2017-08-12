@@ -21,34 +21,13 @@ import { Home } from './home'
 export default class douban extends Component {
   render() {
     return (
-        // <Home>
-        // </Home>
-
-      // <NavigatorIOS 
-      //   style={styles.container}
-      //   initialRoute={{
-      //     title: 'DBM',
-      //     component: Home,
-      //   }}
-      // />
-
-      <View style={styles.container}>
-        <Home>
-        </Home>
-      </View>
-
-      // <View style={styles.container}>
-      //   <Text style={styles.welcome}>
-      //     Welcome to React Native!
-      //   </Text>
-      //   <Text style={styles.instructions}>
-      //     To get started, edit index.ios.js
-      //   </Text>
-      //   <Text style={styles.instructions}>
-      //     Press Cmd+R to reload,{'\n'}
-      //     Cmd+D or shake for dev menu
-      //   </Text>
-      // </View>
+      <NavigatorIOS 
+        style={styles.container}
+        initialRoute={{
+          title: 'DBM',
+          component: Home,
+        }}
+      />
     );
   }
 }
@@ -56,8 +35,6 @@ export default class douban extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
