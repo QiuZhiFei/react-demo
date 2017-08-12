@@ -13,6 +13,7 @@ class Home extends Component {
     constructor(props, context) {
         super(props, context)
         console.log("init", props, context);
+        this._onButtonPress = this._onButtonPress.bind(this);
     }
 
     _onButtonPress() {
@@ -23,15 +24,11 @@ class Home extends Component {
         });
     }
 
-    _onBack() {
-        console.log('back');
-    }
-
     render() {
         return (
             <View style={styles.container}>
                 <Button
-                    onPress={this._onButtonPress.bind(this)}
+                    onPress={this._onButtonPress}
                     title="Push"
                     accessibilityLabel="See an informative alert"
                 />
