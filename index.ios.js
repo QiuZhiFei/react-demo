@@ -9,24 +9,46 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NavigatorIOS
 } from 'react-native';
+
+import { Home } from './home'
+
+// const TabBarView = require('./Application/View/TabBar');
+// const Home = require('./home')
 
 export default class douban extends Component {
   render() {
     return (
+        // <Home>
+        // </Home>
+
+      // <NavigatorIOS 
+      //   style={styles.container}
+      //   initialRoute={{
+      //     title: 'DBM',
+      //     component: Home,
+      //   }}
+      // />
+
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Home>
+        </Home>
       </View>
+
+      // <View style={styles.container}>
+      //   <Text style={styles.welcome}>
+      //     Welcome to React Native!
+      //   </Text>
+      //   <Text style={styles.instructions}>
+      //     To get started, edit index.ios.js
+      //   </Text>
+      //   <Text style={styles.instructions}>
+      //     Press Cmd+R to reload,{'\n'}
+      //     Cmd+D or shake for dev menu
+      //   </Text>
+      // </View>
     );
   }
 }
