@@ -26,6 +26,8 @@ export default class douban extends Component {
         initialRoute={{
           title: 'DBM',
           component: Home,
+          rightButtonTitle: 'Add',
+          onRightButtonPress: () => this._handleNavigationRequest(),
         }}
       />
     );
