@@ -8,17 +8,27 @@ import {
     NavigatorIOS
 } from 'react-native';
 
-const onButtonPress= () => {
-        
-}
-
 export class Home extends Component {
+
+    constructor(props, context) {
+        super(props, context)
+        console.log("init", props, context);
+        console.log("props == ", this.props);
+    }
+
+    onButtonPress() {
+        console.log("hehe", this.props);
+        this.props.navigator.push({
+            component: Home,
+            title: 'Genius'
+        });
+    }
     
     render() {
         return (
             <View style={styles.container}>
                 <Button
-                    onPress={onButtonPress}
+                    onPress={this.onButtonPress.bind(this)}
                     title="Press Me"
                     accessibilityLabel="See an informative alert"
                 />
