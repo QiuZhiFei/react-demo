@@ -10,12 +10,10 @@ import {
 } from 'react-native';
 
 import { MainHomeNav } from './home'
-// import { iostaoge } from './demo'
 
 export class App extends Component {
     render() {
         return (
-            // <iostaoge />
             <RootVC />
         )
     }
@@ -39,7 +37,6 @@ class MainTabVC extends Component {
 
     render() {
         return (
-            // <MainHomeNav />
              <TabBarIOS 
                 barTintColor = 'white'
                 tintColor = 'green'
@@ -51,8 +48,7 @@ class MainTabVC extends Component {
                        this._changeTab('home')
                     }}
                     >
-                    <View style={{flex: 1, backgroundColor: 'red'}}>
-                    </View>
+                    <MainHomeNav />
                 </TabBarIOS.Item>
                 <TabBarIOS.Item
                     title='search'
